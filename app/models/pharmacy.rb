@@ -470,6 +470,7 @@ EOF
       pharmacy_obs =  Pharmacy.new()
       pharmacy_obs.pharmacy_encounter_type = edited_stock_encounter_id
       pharmacy_obs.drug_id = drug_id
+      pharmacy_obs.creator = 999
       pharmacy_obs.value_text = 'Current Stock'
     end
 
@@ -495,6 +496,7 @@ EOF
       pharmacy_obs =  Pharmacy.new()
       pharmacy_obs.pharmacy_encounter_type = edited_stock_encounter_id
       pharmacy_obs.drug_id = drug_id
+      pharmacy_obs.creator = 999
       pharmacy_obs.value_text = 'Drug Rate'
     end
 
