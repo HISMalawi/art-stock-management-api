@@ -19,7 +19,7 @@ set :output, "log/whenever.log"
 
 # Learn more: http://github.com/javan/whenever
 
-every 1.minute do
+every 5.minutes do
   runner "Drug.art_stock_info", :environment => 'development'
 end
 

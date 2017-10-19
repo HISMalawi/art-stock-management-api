@@ -1,28 +1,28 @@
-== README
+== HOW TO SETUP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Read below steps to run your application.
 
-Things you may want to cover:
+* git clone https://github.com/BaobabHealthTrust/art-stock-management-api.git
 
-* Ruby version
+* Navigate into the application you just croned
 
-* System dependencies
+* cp config/secrets.yml.example config/secrets.yml
 
-* Configuration
+* cp config/couchdb.yml.example config/couchdb.yml
 
-* Database creation
+* cp config/database.yml.example config/database.yml
 
-* Database initialization
+* Edit config/couchdb.yml to suit your couch settings
 
-* How to run the test suite
+* Edit config/database.yml to suit your MySQL db settings. Just point to your National ART db. No need to creat new
 
-* Services (job queues, cache servers, search engines, etc.)
+* Use ruby 2.1.2
 
-* Deployment instructions
+* bundle install
 
-* ...
+* whenever --update-crontab  This will create a cron job on your PC that will be running every 5 minutes. In production servers, it will be run once per day
 
+* passenger start
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+*you are done. Receive and dispense drugs in ART module and see changes being reflected in couch db.
+
