@@ -20,7 +20,7 @@ class SendResultsToCouchdb < ActiveRecord::Base
     `curl -X PUT http://#{username}:#{password}@#{ip_address}:#{port}/#{database}`
     `cd #{Rails.root}/db && curl -X PUT -d @couch_views.js http://#{username}:#{password}@#{ip_address}:#{port}/#{database}/_design/StockLevelCouchdb`
 
-    key = data[:date].to_date.strftime("%Y/%m/%d")
+    key = data[:date].to_date.strftime("%Y-%m-%d")
     info = JSON.parse(`curl -X GET http://#{username}:#{password}@#{ip_address}:#{port}/#{database}/_design/#{doc_type}/_view/by_date?key=\\\"#{key}\\\"`)
     uuid = info['rows'].first['id'] rescue nil
     doc = JSON.parse(`curl -X GET http://#{username}:#{password}@#{ip_address}:#{port}/#{database}/#{uuid}`) rescue nil
