@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.5.3'
 gem 'whenever'
 gem 'rest-client', '1.6.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.13', '< 0.5'
+gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
